@@ -126,4 +126,19 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return String(tweets.count-section)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier=="showMentions" {
+                if let mentionsVC = segue.destination as? MentionsTableViewController,
+                    let selectedCell = sender as? TweetTableViewCell,
+                    let indexPath = tableView.indexPath(for: selectedCell) {
+                        let tweet = tweets[indexPath.section][indexPath.row]
+                        // tweet.media
+                        mentionsVC.tweetMentions = [tweet.hashtags, tweet.userMentions, tweet.urls]
+                }
+            }
+        }
+        
+    }
 }
