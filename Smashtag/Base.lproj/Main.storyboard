@@ -120,14 +120,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mentionCell" textLabel="cXz-ST-oTy" style="IBUITableViewCellStyleDefault" id="yXI-yP-eed">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mentionCell" textLabel="GeS-Wi-LQp" style="IBUITableViewCellStyleDefault" id="Aam-rJ-GvT">
                                 <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yXI-yP-eed" id="CZ0-38-u2o">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aam-rJ-GvT" id="L19-nV-hGB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cXz-ST-oTy">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GeS-Wi-LQp">
                                             <rect key="frame" x="15" y="0.0" width="345" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -136,6 +136,28 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="B5f-Ub-uOg" customClass="ImageTableViewCell" customModule="Smashtag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="96" width="375" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B5f-Ub-uOg" id="Mjm-4t-Z6B">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-Hh-p14">
+                                            <rect key="frame" x="8" y="8" width="359" height="51.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OMr-Hh-p14" secondAttribute="bottom" id="6DN-IN-ebR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OMr-Hh-p14" secondAttribute="trailing" id="IpF-rt-NsK"/>
+                                        <constraint firstItem="OMr-Hh-p14" firstAttribute="top" secondItem="Mjm-4t-Z6B" secondAttribute="topMargin" id="PSc-MH-1FC"/>
+                                        <constraint firstItem="OMr-Hh-p14" firstAttribute="leading" secondItem="Mjm-4t-Z6B" secondAttribute="leadingMargin" id="YE1-aM-f7Q"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mediaView" destination="OMr-Hh-p14" id="Tnj-yw-yqe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -146,7 +168,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdX-ck-vrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.8" y="-45.42728635682159"/>
+            <point key="canvasLocation" x="1383.2" y="-46.326836581709152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zn9-M0-Nnc">

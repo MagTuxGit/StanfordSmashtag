@@ -16,6 +16,7 @@
 		8708B10B1E9BA65D000548F7 /* Twitter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8708B1091E9BA65D000548F7 /* Twitter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8708B10E1E9BBF6E000548F7 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708B10D1E9BBF6E000548F7 /* TweetTableViewCell.swift */; };
 		87AD6F7C1E9FB67B004A0F0E /* MentionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD6F7B1E9FB67B004A0F0E /* MentionsTableViewController.swift */; };
+		87AD6F801EA0B997004A0F0E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD6F7F1EA0B996004A0F0E /* ImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		8708B1091E9BA65D000548F7 /* Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8708B10D1E9BBF6E000548F7 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		87AD6F7B1E9FB67B004A0F0E /* MentionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsTableViewController.swift; sourceTree = "<group>"; };
+		87AD6F7F1EA0B996004A0F0E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				8708B1071E9BA0A5000548F7 /* TweetTableViewController.swift */,
 				8708B10D1E9BBF6E000548F7 /* TweetTableViewCell.swift */,
 				87AD6F7B1E9FB67B004A0F0E /* MentionsTableViewController.swift */,
+				87AD6F7F1EA0B996004A0F0E /* ImageTableViewCell.swift */,
 				8708B0F81E9B9EDE000548F7 /* Main.storyboard */,
 				8708B1001E9B9EDE000548F7 /* Info.plist */,
 				8708B1061E9B9EF2000548F7 /* Supporting Files */,
@@ -173,6 +176,7 @@
 			files = (
 				87AD6F7C1E9FB67B004A0F0E /* MentionsTableViewController.swift in Sources */,
 				8708B0F51E9B9EDE000548F7 /* AppDelegate.swift in Sources */,
+				87AD6F801EA0B997004A0F0E /* ImageTableViewCell.swift in Sources */,
 				8708B1081E9BA0A5000548F7 /* TweetTableViewController.swift in Sources */,
 				8708B10E1E9BBF6E000548F7 /* TweetTableViewCell.swift in Sources */,
 			);

@@ -20,6 +20,7 @@ class TweetTableViewCell: UITableViewCell {
     private func updateUI() {
         // highlight mentions (ass.4-req.1)
         var attributedText: NSMutableAttributedString
+
         if let curTweet = tweet {
             attributedText = NSMutableAttributedString(string: curTweet.text)
             for mention in curTweet.hashtags {
@@ -33,11 +34,20 @@ class TweetTableViewCell: UITableViewCell {
             }
 
             tweetTextLabel?.attributedText = attributedText
+            tweetUserLabel?.text = curTweet.user.description
+
+            let formatter = DateFormatter()
+            if Date().timeIntervalSince(curTweet.created) > 24*60*60 {
+                formatter.dateStyle = .short
+            } else {
+                formatter.timeStyle = .short
+            }
+            tweetCreatedLabel?.text = formatter.string(from: curTweet.created)
         } else {
-            tweetTextLabel?.text = ""
+            tweetTextLabel?.text = nil
+            tweetUserLabel?.text = nil
+            tweetCreatedLabel?.text = nil
         }
-        
-        tweetUserLabel?.text = tweet?.user.description
         
         if let profileImageURL = tweet?.user.profileImageURL {
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
@@ -50,18 +60,6 @@ class TweetTableViewCell: UITableViewCell {
                         self?.tweetProfileImageView?.image = nil
                     }
                 }
-            }
-            
-            if let created = tweet?.created {
-                let formatter = DateFormatter()
-                if Date().timeIntervalSince(created) > 24*60*60 {
-                    formatter.dateStyle = .short
-                } else {
-                    formatter.timeStyle = .short
-                }
-                tweetCreatedLabel?.text = formatter.string(from: created)
-            } else {
-                tweetCreatedLabel?.text = nil
             }
         }
     }
